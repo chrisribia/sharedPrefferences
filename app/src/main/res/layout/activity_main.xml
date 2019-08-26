@@ -7,11 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-                                                 android:layout_height="match_parent"
-                                                 tools:context=".MainActivity">
+
 
         <TextView
                 android:id="@+id/textView"
@@ -43,7 +39,7 @@
                 android:layout_margin="8dp"
                 android:ems="10"
                 android:hint="Number"
-                android:inputType="phone"
+                android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_name" />
@@ -72,6 +68,5 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_number" />
 
-    </android.support.constraint.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
