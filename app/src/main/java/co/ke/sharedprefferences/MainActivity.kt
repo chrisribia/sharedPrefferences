@@ -1,6 +1,7 @@
 package co.ke.sharedprefferences
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -30,6 +31,13 @@ class MainActivity : AppCompatActivity() {
         val str_name = sharedPref.getString("name", "")
         val int_number = sharedPref.getString("Qr_cpde", "")
         Toast.makeText(this, "$str_name $int_number", Toast.LENGTH_LONG).show()
+
+    }
+    fun getSanner(view: View) {
+        val intent = Intent(this@MainActivity,ScannActitivty::class.java).apply {
+//            putExtra("name",ed_name.text.toString())
+    }
+        startActivity(intent)
 
     }
 }
