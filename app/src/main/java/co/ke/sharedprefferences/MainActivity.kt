@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val sharedPref = this.getPreferences(Context.MODE_PRIVATE) ?: return
         with(sharedPref.edit()) {
             putString("name", et_name.text.toString())
-            putString("code", et_number.text.toString())
+            putString("Qr_cpde", et_number.text.toString())
             commit()
         }
     }
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     fun getData(view: View) {
         val sharedPref = this.getPreferences(Context.MODE_PRIVATE) ?: return
         val str_name = sharedPref.getString("name", "")
-        val int_number = sharedPref.getString("number", "")
+        val int_number = sharedPref.getString("Qr_cpde", "")
         Toast.makeText(this, "$str_name $int_number", Toast.LENGTH_LONG).show()
 
     }
