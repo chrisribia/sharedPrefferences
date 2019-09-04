@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //customizing qr reader
     fun getData(view: View) {
         val sharedPref = this.getPreferences(Context.MODE_PRIVATE) ?: return
         val str_name = sharedPref.getString("name", "")
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
+//getting scann results
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == Activity.RESULT_OK) {
             val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
